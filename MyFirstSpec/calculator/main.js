@@ -9,6 +9,11 @@ function calculate(inputValue) {
 
 	const operation = inputValue.match(expression);
 
+	if (Number.isNaN(numA) || Number.isNaN(numB) || operation === null) {
+		updateResult("Operation not recognized!");
+		return;
+	}
+
 	const calculator = new Calculator();
 	calculator.add(numA);
 
